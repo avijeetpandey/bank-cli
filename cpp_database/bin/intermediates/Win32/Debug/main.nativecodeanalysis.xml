@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>d:\c++ projects\cpp_database\cpp_database\src</FILEPATH>
+      <FILENAME>main.cpp</FILENAME>
+      <LINE>61</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Account::ac_no' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Account::{ctor}</FUNCTION>
+    <DECORATED>??0Account@@QAE@XZ</DECORATED>
+    <FUNCLINE>61</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>d:\c++ projects\cpp_database\cpp_database\src</FILEPATH>
+      <FILENAME>main.cpp</FILENAME>
+      <LINE>61</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Account::transactions' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Account::{ctor}</FUNCTION>
+    <DECORATED>??0Account@@QAE@XZ</DECORATED>
+    <FUNCLINE>61</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>d:\c++ projects\cpp_database\cpp_database\src</FILEPATH>
+      <FILENAME>main.cpp</FILENAME>
+      <LINE>161</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>26444</DEFECTCODE>
+    <DESCRIPTION>Avoid unnamed objects with custom construction and destruction (es.84).</DESCRIPTION>
+    <FUNCTION>Account::deposit</FUNCTION>
+    <DECORATED>?deposit@Account@@QAEXXZ</DECORATED>
+    <FUNCLINE>153</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>d:\c++ projects\cpp_database\cpp_database\src</FILEPATH>
+      <FILENAME>main.cpp</FILENAME>
+      <LINE>187</LINE>
+      <COLUMN>5</COLUMN>
+    </SFA>
+    <DEFECTCODE>26444</DEFECTCODE>
+    <DESCRIPTION>Avoid unnamed objects with custom construction and destruction (es.84).</DESCRIPTION>
+    <FUNCTION>Account::withdraw</FUNCTION>
+    <DECORATED>?withdraw@Account@@QAEXXZ</DECORATED>
+    <FUNCLINE>175</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>d:\c++ projects\cpp_database\cpp_database\src</FILEPATH>
+      <FILENAME>main.cpp</FILENAME>
+      <LINE>221</LINE>
+      <COLUMN>14</COLUMN>
+    </SFA>
+    <DEFECTCODE>6001</DEFECTCODE>
+    <DESCRIPTION>Using uninitialized memory 'findBalance'.</DESCRIPTION>
+    <FUNCTION>Account::moneyTransfer</FUNCTION>
+    <DECORATED>?moneyTransfer@Account@@QAE_NXZ</DECORATED>
+    <FUNCLINE>200</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>3</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>d:\c++ projects\cpp_database\cpp_database\src</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>201</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>d:\c++ projects\cpp_database\cpp_database\src</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>202</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>d:\c++ projects\cpp_database\cpp_database\src</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>204</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>d:\c++ projects\cpp_database\cpp_database\src</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>205</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>d:\c++ projects\cpp_database\cpp_database\src</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>206</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>d:\c++ projects\cpp_database\cpp_database\src</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>207</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>d:\c++ projects\cpp_database\cpp_database\src</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>209</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>d:\c++ projects\cpp_database\cpp_database\src</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>209</LINE>
+        <COLUMN>21</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'findBalance' is not initialized</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>d:\c++ projects\cpp_database\cpp_database\src</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>210</LINE>
+        <COLUMN>46</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>d:\c++ projects\cpp_database\cpp_database\src</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>210</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\avije\desktop\vcpkg\installed\x86-windows\include\mongocxx</FILEPATH>
+        <FILENAME>collection.hpp</FILENAME>
+        <LINE>854</LINE>
+        <COLUMN>95</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>d:\c++ projects\cpp_database\cpp_database\src</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>212</LINE>
+        <COLUMN>77</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>d:\c++ projects\cpp_database\cpp_database\src</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>212</LINE>
+        <COLUMN>52</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>d:\c++ projects\cpp_database\cpp_database\src</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>215</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'r._N()' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>d:\c++ projects\cpp_database\cpp_database\src</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>221</LINE>
+        <COLUMN>14</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'findBalance' is used, but may not have been initialized</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>d:\c++ projects\cpp_database\cpp_database\src</FILEPATH>
+      <FILENAME>main.cpp</FILENAME>
+      <LINE>235</LINE>
+      <COLUMN>5</COLUMN>
+    </SFA>
+    <DEFECTCODE>26444</DEFECTCODE>
+    <DESCRIPTION>Avoid unnamed objects with custom construction and destruction (es.84).</DESCRIPTION>
+    <FUNCTION>Account::moneyTransfer</FUNCTION>
+    <DECORATED>?moneyTransfer@Account@@QAE_NXZ</DECORATED>
+    <FUNCLINE>200</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>d:\c++ projects\cpp_database\cpp_database\src</FILEPATH>
+      <FILENAME>main.cpp</FILENAME>
+      <LINE>225</LINE>
+      <COLUMN>5</COLUMN>
+    </SFA>
+    <DEFECTCODE>26444</DEFECTCODE>
+    <DESCRIPTION>Avoid unnamed objects with custom construction and destruction (es.84).</DESCRIPTION>
+    <FUNCTION>Account::moneyTransfer</FUNCTION>
+    <DECORATED>?moneyTransfer@Account@@QAE_NXZ</DECORATED>
+    <FUNCLINE>200</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\avije\desktop\vcpkg\installed\x86-windows\include\boost\optional</FILEPATH>
+      <FILENAME>optional.hpp</FILENAME>
+      <LINE>140</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'boost::optional_detail::optional_base&lt;mongocxx::v_noabi::options::apm&gt;::m_storage' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>boost::optional_detail::optional_base&lt;mongocxx::v_noabi::options::apm&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$optional_base@Vapm@options@v_noabi@mongocxx@@@optional_detail@boost@@IAE@XZ</DECORATED>
+    <FUNCLINE>140</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\avije\desktop\vcpkg\installed\x86-windows\include\boost\optional</FILEPATH>
+      <FILENAME>optional.hpp</FILENAME>
+      <LINE>140</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'boost::optional_detail::optional_base&lt;mongocxx::v_noabi::options::ssl&gt;::m_storage' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>boost::optional_detail::optional_base&lt;mongocxx::v_noabi::options::ssl&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$optional_base@Vssl@options@v_noabi@mongocxx@@@optional_detail@boost@@IAE@XZ</DECORATED>
+    <FUNCLINE>140</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\avije\desktop\vcpkg\installed\x86-windows\include\boost\optional</FILEPATH>
+      <FILENAME>optional.hpp</FILENAME>
+      <LINE>140</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'boost::optional_detail::optional_base&lt;mongocxx::v_noabi::pipeline&gt;::m_storage' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>boost::optional_detail::optional_base&lt;mongocxx::v_noabi::pipeline&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$optional_base@Vpipeline@v_noabi@mongocxx@@@optional_detail@boost@@IAE@XZ</DECORATED>
+    <FUNCLINE>140</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\avije\desktop\vcpkg\installed\x86-windows\include\boost\optional</FILEPATH>
+      <FILENAME>optional.hpp</FILENAME>
+      <LINE>140</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'boost::optional_detail::optional_base&lt;mongocxx::v_noabi::read_concern&gt;::m_storage' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>boost::optional_detail::optional_base&lt;mongocxx::v_noabi::read_concern&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$optional_base@Vread_concern@v_noabi@mongocxx@@@optional_detail@boost@@IAE@XZ</DECORATED>
+    <FUNCLINE>140</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\avije\desktop\vcpkg\installed\x86-windows\include\boost\optional\detail</FILEPATH>
+      <FILENAME>optional_trivially_copyable_base.hpp</FILENAME>
+      <LINE>25</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'boost::optional_detail::tc_optional_base&lt;enum mongocxx::v_noabi::options::return_document&gt;::m_storage' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>boost::optional_detail::tc_optional_base&lt;enum mongocxx::v_noabi::options::return_document&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$tc_optional_base@W4return_document@options@v_noabi@mongocxx@@@optional_detail@boost@@IAE@XZ</DECORATED>
+    <FUNCLINE>25</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\avije\desktop\vcpkg\installed\x86-windows\include\boost\optional\detail</FILEPATH>
+      <FILENAME>optional_trivially_copyable_base.hpp</FILENAME>
+      <LINE>25</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'boost::optional_detail::tc_optional_base&lt;__int64&gt;::m_storage' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>boost::optional_detail::tc_optional_base&lt;__int64&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$tc_optional_base@_J@optional_detail@boost@@IAE@XZ</DECORATED>
+    <FUNCLINE>25</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\avije\desktop\vcpkg\installed\x86-windows\include\boost\optional</FILEPATH>
+      <FILENAME>optional.hpp</FILENAME>
+      <LINE>140</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'boost::optional_detail::optional_base&lt;mongocxx::v_noabi::hint&gt;::m_storage' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>boost::optional_detail::optional_base&lt;mongocxx::v_noabi::hint&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$optional_base@Vhint@v_noabi@mongocxx@@@optional_detail@boost@@IAE@XZ</DECORATED>
+    <FUNCLINE>140</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\avije\desktop\vcpkg\installed\x86-windows\include\boost\optional</FILEPATH>
+      <FILENAME>optional.hpp</FILENAME>
+      <LINE>140</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'boost::optional_detail::optional_base&lt;mongocxx::v_noabi::read_preference&gt;::m_storage' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>boost::optional_detail::optional_base&lt;mongocxx::v_noabi::read_preference&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$optional_base@Vread_preference@v_noabi@mongocxx@@@optional_detail@boost@@IAE@XZ</DECORATED>
+    <FUNCLINE>140</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\avije\desktop\vcpkg\installed\x86-windows\include\boost\optional</FILEPATH>
+      <FILENAME>optional.hpp</FILENAME>
+      <LINE>140</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'boost::optional_detail::optional_base&lt;std::chrono::duration&lt;__int64,std::ratio&lt;1,1000&gt; &gt; &gt;::m_storage' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>boost::optional_detail::optional_base&lt;std::chrono::duration&lt;__int64,std::ratio&lt;1,1000&gt; &gt; &gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$optional_base@V?$duration@_JU?$ratio@$00$0DOI@@std@@@chrono@std@@@optional_detail@boost@@IAE@XZ</DECORATED>
+    <FUNCLINE>140</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\avije\desktop\vcpkg\installed\x86-windows\include\boost\optional\detail</FILEPATH>
+      <FILENAME>optional_trivially_copyable_base.hpp</FILENAME>
+      <LINE>25</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'boost::optional_detail::tc_optional_base&lt;int&gt;::m_storage' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>boost::optional_detail::tc_optional_base&lt;int&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$tc_optional_base@H@optional_detail@boost@@IAE@XZ</DECORATED>
+    <FUNCLINE>25</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\avije\desktop\vcpkg\installed\x86-windows\include\boost\optional</FILEPATH>
+      <FILENAME>optional.hpp</FILENAME>
+      <LINE>140</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'boost::optional_detail::optional_base&lt;bsoncxx::v_noabi::string::view_or_value&gt;::m_storage' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>boost::optional_detail::optional_base&lt;bsoncxx::v_noabi::string::view_or_value&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$optional_base@Vview_or_value@string@v_noabi@bsoncxx@@@optional_detail@boost@@IAE@XZ</DECORATED>
+    <FUNCLINE>140</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\avije\desktop\vcpkg\installed\x86-windows\include\boost\optional\detail</FILEPATH>
+      <FILENAME>optional_trivially_copyable_base.hpp</FILENAME>
+      <LINE>25</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'boost::optional_detail::tc_optional_base&lt;enum mongocxx::v_noabi::cursor::type&gt;::m_storage' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>boost::optional_detail::tc_optional_base&lt;enum mongocxx::v_noabi::cursor::type&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$tc_optional_base@W4type@cursor@v_noabi@mongocxx@@@optional_detail@boost@@IAE@XZ</DECORATED>
+    <FUNCLINE>25</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\avije\desktop\vcpkg\installed\x86-windows\include\boost\optional</FILEPATH>
+      <FILENAME>optional.hpp</FILENAME>
+      <LINE>140</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'boost::optional_detail::optional_base&lt;mongocxx::v_noabi::write_concern&gt;::m_storage' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>boost::optional_detail::optional_base&lt;mongocxx::v_noabi::write_concern&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$optional_base@Vwrite_concern@v_noabi@mongocxx@@@optional_detail@boost@@IAE@XZ</DECORATED>
+    <FUNCLINE>140</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\avije\desktop\vcpkg\installed\x86-windows\include\boost\optional</FILEPATH>
+      <FILENAME>optional.hpp</FILENAME>
+      <LINE>140</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'boost::optional_detail::optional_base&lt;bsoncxx::v_noabi::view_or_value&lt;bsoncxx::v_noabi::array::view,bsoncxx::v_noabi::array::value&gt; &gt;::m_storage' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>boost::optional_detail::optional_base&lt;bsoncxx::v_noabi::view_or_value&lt;bsoncxx::v_noabi::array::view,bsoncxx::v_noabi::array::value&gt; &gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$optional_base@V?$view_or_value@Vview@array@v_noabi@bsoncxx@@Vvalue@234@@v_noabi@bsoncxx@@@optional_detail@boost@@IAE@XZ</DECORATED>
+    <FUNCLINE>140</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\avije\desktop\vcpkg\installed\x86-windows\include\boost\optional\detail</FILEPATH>
+      <FILENAME>optional_trivially_copyable_base.hpp</FILENAME>
+      <LINE>25</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'boost::optional_detail::tc_optional_base&lt;bool&gt;::m_storage' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>boost::optional_detail::tc_optional_base&lt;bool&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$tc_optional_base@_N@optional_detail@boost@@IAE@XZ</DECORATED>
+    <FUNCLINE>25</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\avije\desktop\vcpkg\installed\x86-windows\include\boost\optional</FILEPATH>
+      <FILENAME>optional.hpp</FILENAME>
+      <LINE>140</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'boost::optional_detail::optional_base&lt;bsoncxx::v_noabi::view_or_value&lt;bsoncxx::v_noabi::document::view,bsoncxx::v_noabi::document::value&gt; &gt;::m_storage' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>boost::optional_detail::optional_base&lt;bsoncxx::v_noabi::view_or_value&lt;bsoncxx::v_noabi::document::view,bsoncxx::v_noabi::document::value&gt; &gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$optional_base@V?$view_or_value@Vview@document@v_noabi@bsoncxx@@Vvalue@234@@v_noabi@bsoncxx@@@optional_detail@boost@@IAE@XZ</DECORATED>
+    <FUNCLINE>140</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\avije\desktop\vcpkg\installed\x86-windows\include\boost\optional</FILEPATH>
+      <FILENAME>optional.hpp</FILENAME>
+      <LINE>194</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'boost::optional_detail::optional_base&lt;std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt; &gt; &gt;::m_storage' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>boost::optional_detail::optional_base&lt;std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt; &gt; &gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$optional_base@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@optional_detail@boost@@IAE@ABV012@@Z</DECORATED>
+    <FUNCLINE>194</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\avije\desktop\vcpkg\installed\x86-windows\include\boost\optional</FILEPATH>
+      <FILENAME>optional.hpp</FILENAME>
+      <LINE>140</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'boost::optional_detail::optional_base&lt;std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt; &gt; &gt;::m_storage' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>boost::optional_detail::optional_base&lt;std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt; &gt; &gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$optional_base@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@optional_detail@boost@@IAE@XZ</DECORATED>
+    <FUNCLINE>140</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\avije\desktop\vcpkg\installed\x86-windows\include\boost\optional</FILEPATH>
+      <FILENAME>optional.hpp</FILENAME>
+      <LINE>140</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'boost::optional_detail::optional_base&lt;mongocxx::v_noabi::options::transaction&gt;::m_storage' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>boost::optional_detail::optional_base&lt;mongocxx::v_noabi::options::transaction&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$optional_base@Vtransaction@options@v_noabi@mongocxx@@@optional_detail@boost@@IAE@XZ</DECORATED>
+    <FUNCLINE>140</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\avije\desktop\vcpkg\installed\x86-windows\include\boost\optional</FILEPATH>
+      <FILENAME>optional.hpp</FILENAME>
+      <LINE>205</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'boost::optional_detail::optional_base&lt;bsoncxx::v_noabi::array::value&gt;::m_storage' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>boost::optional_detail::optional_base&lt;bsoncxx::v_noabi::array::value&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$optional_base@Vvalue@array@v_noabi@bsoncxx@@@optional_detail@boost@@IAE@$$QAV012@@Z</DECORATED>
+    <FUNCLINE>205</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\avije\desktop\vcpkg\installed\x86-windows\include\boost\optional</FILEPATH>
+      <FILENAME>optional.hpp</FILENAME>
+      <LINE>205</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'boost::optional_detail::optional_base&lt;bsoncxx::v_noabi::document::value&gt;::m_storage' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>boost::optional_detail::optional_base&lt;bsoncxx::v_noabi::document::value&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$optional_base@Vvalue@document@v_noabi@bsoncxx@@@optional_detail@boost@@IAE@$$QAV012@@Z</DECORATED>
+    <FUNCLINE>205</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\avije\desktop\vcpkg\installed\x86-windows\include\boost\optional</FILEPATH>
+      <FILENAME>optional.hpp</FILENAME>
+      <LINE>140</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'boost::optional_detail::optional_base&lt;bsoncxx::v_noabi::document::value&gt;::m_storage' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>boost::optional_detail::optional_base&lt;bsoncxx::v_noabi::document::value&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$optional_base@Vvalue@document@v_noabi@bsoncxx@@@optional_detail@boost@@IAE@XZ</DECORATED>
+    <FUNCLINE>140</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\avije\desktop\vcpkg\installed\x86-windows\include\boost\optional</FILEPATH>
+      <FILENAME>optional.hpp</FILENAME>
+      <LINE>162</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'boost::optional_detail::optional_base&lt;bsoncxx::v_noabi::document::value&gt;::m_storage' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>boost::optional_detail::optional_base&lt;bsoncxx::v_noabi::document::value&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$optional_base@Vvalue@document@v_noabi@bsoncxx@@@optional_detail@boost@@IAE@Uinit_value_tag@12@$$QAVvalue@document@v_noabi@bsoncxx@@@Z</DECORATED>
+    <FUNCLINE>162</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>
