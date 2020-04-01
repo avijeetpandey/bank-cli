@@ -64,11 +64,12 @@ public:
 
 	void menu();
 	int createAccountNumber();
+	void showAccountBalance();
 	void createAccount();
 	void getDetails();
 	void saveDetails();
-	void deposit(double money);
-	bool withdraw(double money);
+	void deposit();
+	void withdraw();
 	bool moneyTransfer(long ac_no, double money);
 
 };
@@ -122,8 +123,6 @@ void Account::getDetails() {
 //method to print user details
 void Account::saveDetails() {
 
-	//getting access to the specified collection
-	//auto coll = client[db_name][collection_name];
 	//making the document to be saved
 	auto builder = bsoncxx::builder::stream::document{};
 	bsoncxx::document::value doc_value = builder
@@ -148,28 +147,57 @@ void Account::saveDetails() {
 }
 
 
-//fuctions to be implemnted
-//deposit method
-void Account::deposit(double money) {
+void Account::showAccountBalance() {
+	std::cout << "Account balance  : " << account_balance << endl;
+}
 
+
+//deposit method
+void Account::deposit() {
+	double money;
+	std::cout << "Enter amount : ";
+	std::cin >> money;
+	account_balance += money;
+
+	std::cout << "New Money is : " << account_balance << endl;
 	//getting the access to the collection and updating the account balance
-	bsoncxx::stdx::optional<mongocxx::result::update> res = coll.update_one(
+   	coll.update_one(
 		bsoncxx::builder::stream::document{}<<"ac_no"<<ac_no
-		<<"balance"<<account_balance
 		<<finalize,
 		bsoncxx::builder::stream::document{}<<"$set"
 		<<open_document
-			<<"balance"<<newMoney
+			<<"balance"<<account_balance
 		<<close_document<<finalize
 	);
 
-	std::cout << "Money deposited to the account " << endl;
+	std::cout <<money<< " deposited" << endl;
 
 }
 
 //withdraw method
-bool Account::withdraw(double money) {
-	return false;
+void Account::withdraw() {
+	double money;
+	std::cout << "Enter amount : ";
+	std::cin >> money;
+	if (money > account_balance) {
+		std::cout << "Cannot Process , Insufficient funds " << endl;
+		return;
+	}
+
+	account_balance -= money;
+
+	//updating the withdrawl to the database
+	coll.update_one(
+		bsoncxx::builder::stream::document{}<<"ac_no"<<ac_no
+		<<finalize,
+		bsoncxx::builder::stream::document{}
+			<<"$set"
+			<<open_document
+			<<"balance"<<account_balance
+			<<close_document<<finalize
+	);
+
+	std::cout << money<<"  Withdrawn " << endl;
 }
 
 bool moneyTransfer(long ac_no, double money) {
@@ -181,9 +209,12 @@ int main() {
 
 	Account  P1;
     P1.createAccount();
-	P1.deposit(50000);
-	P1.deposit(15000);
-
+	P1.deposit();
+	P1.deposit();
+	P1.showAccountBalance();
+	P1.withdraw();
+	P1.withdraw();
+	P1.showAccountBalance();
 
 	return 0;
 }
