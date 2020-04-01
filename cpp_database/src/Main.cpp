@@ -9,6 +9,7 @@
 #include<boost/filesystem.hpp>
 
 //bson imports
+#include<bsoncxx/types.hpp>
 #include<bsoncxx/json.hpp>
 #include<bsoncxx/oid.hpp>
 #include<bsoncxx/builder/stream/document.hpp>
@@ -70,7 +71,7 @@ public:
 	void saveDetails();
 	void deposit();
 	void withdraw();
-	bool moneyTransfer(long ac_no, double money);
+	bool moneyTransfer();
 
 };
 
@@ -200,21 +201,71 @@ void Account::withdraw() {
 	std::cout << money<<"  Withdrawn " << endl;
 }
 
-bool moneyTransfer(long ac_no, double money) {
-	return false;
+bool Account::moneyTransfer() {
+	int to_ac;
+	double money;
+
+	std::cout << "Enter a/c to send : ";
+	std::cin >> to_ac;
+	std::cout << "enter amount : ";
+	std::cin >> money;
+
+	double totalBalance,findBalance;
+	auto doc = bsoncxx::builder::stream::document{} << "ac_no" << to_ac << finalize;
+		//finding the bank account
+	mongocxx::stdx::optional<bsoncxx::document::value> r= coll.find_one(doc.view());
+
+
+	if (r) {
+		bsoncxx::document::element to_balance= r->view()["balance"];
+		if (to_balance.type() == bsoncxx::type::k_double)
+			findBalance = to_balance.get_double();
+	}
+
+	totalBalance = findBalance + money;
+
+	if (money > account_balance)
+		return false;
+	coll.update_one(
+		bsoncxx::builder::stream::document{}<<"ac_no"<<to_ac<<
+		finalize,
+		bsoncxx::builder::stream::document{}<<"$set"
+			<<open_document
+				<<"balance"<<totalBalance<<close_document<<finalize
+	);
+
+	account_balance -= money;
+
+	coll.update_one(
+		bsoncxx::builder::stream::document{} << "ac_no" << ac_no
+		<< finalize,
+		bsoncxx::builder::stream::document{}
+		<< "$set"
+		<< open_document
+		<< "balance" << account_balance
+		<< close_document << finalize
+	);
+
+
+	return true;
+
 }
 
 //driver code
 int main() {
 
-	Account  P1;
-    P1.createAccount();
+	Account P1;
+	P1.createAccount();
 	P1.deposit();
 	P1.deposit();
-	P1.showAccountBalance();
-	P1.withdraw();
-	P1.withdraw();
-	P1.showAccountBalance();
-
+	bool response=P1.moneyTransfer();
+	if (response)
+	{
+		std::cout << "Money Transferred " << endl;
+	}
+	else
+	{
+		std::cout << "Operation failed " << endl;
+	}
 	return 0;
 }
