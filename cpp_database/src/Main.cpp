@@ -75,10 +75,6 @@ public:
 
 };
 
-//menu for the bank class
-void Account::menu() {
-
-}
 
 //create account
 void Account::createAccount() {
