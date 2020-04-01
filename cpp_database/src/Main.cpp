@@ -33,15 +33,15 @@ const std::string collection_name = "account_details";
 
 mongocxx::instance inst{}; //one and only instance of the database
 mongocxx::client client{ mongocxx::uri{} };
-
+auto coll = client[db_name][collection_name];
 
 struct Person {
 	std::string name;
-	char gender;
+	std::string gender;
 	std::string mobile;
 	std::string nationality;
 	std::string city;
-	int postal_code;
+	std::string postal_code;
 };
 
 class Account {
@@ -49,6 +49,7 @@ class Account {
 	double account_balance;
 	std::string IFSC_code;
 	Person P;
+	int transactions;
 
 	//other variables
 	std::string welcome = "Welcome to C++ Bank ";
@@ -66,7 +67,7 @@ public:
 	void createAccount();
 	void getDetails();
 	void saveDetails();
-	bool deposit(double money);
+	void deposit(double money);
 	bool withdraw(double money);
 	bool moneyTransfer(long ac_no, double money);
 
@@ -122,7 +123,7 @@ void Account::getDetails() {
 void Account::saveDetails() {
 
 	//getting access to the specified collection
-	auto coll = client[db_name][collection_name];
+	//auto coll = client[db_name][collection_name];
 	//making the document to be saved
 	auto builder = bsoncxx::builder::stream::document{};
 	bsoncxx::document::value doc_value = builder
@@ -130,8 +131,8 @@ void Account::saveDetails() {
 		<< "IFSC" << IFSC_code
 		<<"balance"<<account_balance
 		<< "name" << P.name
-		<< "mobile" << P.mobile
 		<< "gender" << P.gender
+		<< "mobile" << P.mobile
 		<< "address" << bsoncxx::builder::stream::open_document
 		<< "city" << P.city
 		<< "zip" << P.postal_code
@@ -149,8 +150,21 @@ void Account::saveDetails() {
 
 //fuctions to be implemnted
 //deposit method
-bool Account::deposit(double money) {
-	return false;
+void Account::deposit(double money) {
+
+	//getting the access to the collection and updating the account balance
+	bsoncxx::stdx::optional<mongocxx::result::update> res = coll.update_one(
+		bsoncxx::builder::stream::document{}<<"ac_no"<<ac_no
+		<<"balance"<<account_balance
+		<<finalize,
+		bsoncxx::builder::stream::document{}<<"$set"
+		<<open_document
+			<<"balance"<<newMoney
+		<<close_document<<finalize
+	);
+
+	std::cout << "Money deposited to the account " << endl;
+
 }
 
 //withdraw method
@@ -165,7 +179,10 @@ bool moneyTransfer(long ac_no, double money) {
 //driver code
 int main() {
 
-
+	Account  P1;
+    P1.createAccount();
+	P1.deposit(50000);
+	P1.deposit(15000);
 
 
 	return 0;
